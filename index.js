@@ -5,7 +5,7 @@ const axios = require("axios");
 const provider = new ethers.providers.JsonRpcProvider("http://localhost:8545");
 
 // Contract instance
-const contractAddress = "0x33f3D02ab779cEe91f0D61C952601290dbdEA16a"; // Address of the smart contract
+const contractAddress = "0x830100051cCEEFcbACAABCFe7cB3B9111d236663"; // Address of the smart contract
 const contractABI = [
   {
     constant: true,
