@@ -2,10 +2,12 @@ const { ethers } = require("ethers");
 const axios = require("axios");
 
 // Provider instance (e.g., connecting to an Ethereum node)
-const provider = new ethers.providers.JsonRpcProvider("http://localhost:9545");
+const provider = new ethers.providers.JsonRpcProvider(
+  "http://65.109.63.154:9545"
+);
 
 // Contract instance
-const contractAddress = "0x6aA14eE71632F62C16003781260668A7d666374a"; // Address of the smart contract
+const contractAddress = "0x63b09b70750115d7247393Ae91520535b9d1A54d"; // Address of the smart contract
 const contractABI = [
   {
     constant: true,
@@ -56,12 +58,12 @@ const functionName = "get"; // Name of the function you want to call
 
 // Parameters for the function (if any)
 const functionParams = [
-  "0x0000000000000000000000000000000000000000000000000000000000000001",
-  1,
-  9,
+  "0x0000000000000000000000000000000000000000000000000000000000000000",
+  0,
+  131072,
 ]; // Array of function parameters
 
-const ethereumNodeURL = "http://localhost:9545";
+const ethereumNodeURL = "http://65.109.63.154:9545";
 
 // Call the function using eth_call
 async function callContract() {
@@ -80,7 +82,7 @@ async function callContract() {
         {
           to: contractAddress,
           data: functionData,
-          from: "0xBeFFb94A85904f0Aba9C0DDB857d7Ff840Cf86Bd",
+          from: "0x4E9A3d9D1cd2A2b2371b8b3F489aE72259886f1A",
         },
         "latest",
       ],
